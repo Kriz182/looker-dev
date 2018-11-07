@@ -12,6 +12,7 @@ view: dim_geography {
   }
 
   dimension: english_country_region_name {
+    label: "Country Region"
     type: string
     sql: ${TABLE}.EnglishCountryRegionName ;;
   }
@@ -19,12 +20,14 @@ view: dim_geography {
   dimension: french_country_region_name {
     type: string
     sql: ${TABLE}.FrenchCountryRegionName ;;
+    hidden: yes
   }
 
   dimension: geography_key {
     primary_key: yes
     type: number
     sql: ${TABLE}.GeographyKey ;;
+    hidden: yes
   }
 
   dimension: postal_code {
@@ -35,11 +38,13 @@ view: dim_geography {
   dimension: sales_territory_key {
     type: number
     sql: ${TABLE}.SalesTerritoryKey ;;
+    hidden: yes
   }
 
   dimension: spanish_country_region_name {
     type: string
     sql: ${TABLE}.SpanishCountryRegionName ;;
+    hidden: yes
   }
 
   dimension: state_province_code {

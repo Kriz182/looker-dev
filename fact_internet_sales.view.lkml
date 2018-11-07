@@ -130,6 +130,7 @@ view: fact_internet_sales {
     type:  sum
     sql: ${sales_amount} ;;
     value_format_name: usd
+    drill_fields: [order_details*]
   }
 
   measure: average_sales  {

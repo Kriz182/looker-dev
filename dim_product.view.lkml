@@ -4,11 +4,13 @@ view: dim_product {
   dimension: arabic_description {
     type: string
     sql: ${TABLE}.ArabicDescription ;;
+    hidden: yes
   }
 
   dimension: chinese_description {
     type: string
     sql: ${TABLE}.ChineseDescription ;;
+    hidden: yes
   }
 
   dimension: class {
@@ -46,11 +48,13 @@ view: dim_product {
   }
 
   dimension: english_description {
+    label: "Description"
     type: string
     sql: ${TABLE}.EnglishDescription ;;
   }
 
   dimension: english_product_name {
+    label: "Product Name"
     type: string
     sql: ${TABLE}.EnglishProductName ;;
   }
@@ -63,31 +67,37 @@ view: dim_product {
   dimension: french_description {
     type: string
     sql: ${TABLE}.FrenchDescription ;;
+    hidden: yes
   }
 
   dimension: french_product_name {
     type: string
     sql: ${TABLE}.FrenchProductName ;;
+    hidden: yes
   }
 
   dimension: german_description {
     type: string
     sql: ${TABLE}.GermanDescription ;;
+    hidden: yes
   }
 
   dimension: hebrew_description {
     type: string
     sql: ${TABLE}.HebrewDescription ;;
+    hidden: yes
   }
 
   dimension: japanese_description {
     type: string
     sql: ${TABLE}.JapaneseDescription ;;
+    hidden: yes
   }
 
   dimension: list_price {
     type: string
     sql: ${TABLE}.ListPrice ;;
+    value_format_name: usd
   }
 
   dimension: model_name {
@@ -98,12 +108,14 @@ view: dim_product {
   dimension: product_alternate_key {
     type: string
     sql: ${TABLE}.ProductAlternateKey ;;
+    hidden: yes
   }
 
   dimension: product_key {
     primary_key: yes
     type: number
     sql: ${TABLE}.ProductKey ;;
+    hidden: yes
   }
 
   dimension: product_line {
@@ -114,6 +126,7 @@ view: dim_product {
   dimension: product_subcategory_key {
     type: number
     sql: ${TABLE}.ProductSubcategoryKey ;;
+    hidden: yes
   }
 
   dimension: reorder_point {
@@ -144,11 +157,13 @@ view: dim_product {
   dimension: spanish_product_name {
     type: string
     sql: ${TABLE}.SpanishProductName ;;
+    hidden: yes
   }
 
   dimension: standard_cost {
     type: string
     sql: ${TABLE}.StandardCost ;;
+    value_format_name: usd
   }
 
   dimension_group: start {
@@ -178,11 +193,13 @@ view: dim_product {
   dimension: thai_description {
     type: string
     sql: ${TABLE}.ThaiDescription ;;
+    hidden: yes
   }
 
   dimension: turkish_description {
     type: string
     sql: ${TABLE}.TurkishDescription ;;
+    hidden: yes
   }
 
   dimension: weight {

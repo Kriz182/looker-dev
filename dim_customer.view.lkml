@@ -34,12 +34,14 @@ view: dim_customer {
   dimension: customer_alternate_key {
     type: string
     sql: ${TABLE}.CustomerAlternateKey ;;
+    hidden: yes
   }
 
   dimension: customer_key {
     primary_key: yes
     type: number
     sql: ${TABLE}.CustomerKey ;;
+    hidden: yes
   }
 
   dimension_group: date_first_purchase {
@@ -63,11 +65,13 @@ view: dim_customer {
   }
 
   dimension: english_education {
+    label: "Education"
     type: string
     sql: ${TABLE}.EnglishEducation ;;
   }
 
   dimension: english_occupation {
+    label: "Occupation"
     type: string
     sql: ${TABLE}.EnglishOccupation ;;
   }
@@ -80,11 +84,13 @@ view: dim_customer {
   dimension: french_education {
     type: string
     sql: ${TABLE}.FrenchEducation ;;
+    hidden: yes
   }
 
   dimension: french_occupation {
     type: string
     sql: ${TABLE}.FrenchOccupation ;;
+    hidden: yes
   }
 
   dimension: gender {
@@ -95,11 +101,13 @@ view: dim_customer {
   dimension: geography_key {
     type: number
     sql: ${TABLE}.GeographyKey ;;
+    hidden: yes
   }
 
   dimension: house_owner_flag {
     type: string
     sql: ${TABLE}.HouseOwnerFlag ;;
+    hidden: yes
   }
 
   dimension: last_name {
@@ -125,11 +133,13 @@ view: dim_customer {
   dimension: number_cars_owned {
     type: number
     sql: ${TABLE}.NumberCarsOwned ;;
+    hidden: yes
   }
 
   dimension: number_children_at_home {
     type: number
     sql: ${TABLE}.NumberChildrenAtHome ;;
+    hidden: yes
   }
 
   dimension: phone {
@@ -140,16 +150,19 @@ view: dim_customer {
   dimension: spanish_education {
     type: string
     sql: ${TABLE}.SpanishEducation ;;
+    hidden: yes
   }
 
   dimension: spanish_occupation {
     type: string
     sql: ${TABLE}.SpanishOccupation ;;
+    hidden: yes
   }
 
   dimension: suffix {
     type: string
     sql: ${TABLE}.Suffix ;;
+    hidden: yes
   }
 
   dimension: title {
@@ -160,6 +173,7 @@ view: dim_customer {
   dimension: total_children {
     type: number
     sql: ${TABLE}.TotalChildren ;;
+    hidden: yes
   }
 
   dimension: yearly_income {

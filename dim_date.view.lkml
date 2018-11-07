@@ -20,6 +20,7 @@ view: dim_date {
     primary_key: yes
     type: number
     sql: ${TABLE}.DateKey ;;
+    hidden: yes
   }
 
   dimension: day_number_of_month {
@@ -38,11 +39,13 @@ view: dim_date {
   }
 
   dimension: english_day_name_of_week {
+    label: "Day Name of Week"
     type: string
     sql: ${TABLE}.EnglishDayNameOfWeek ;;
   }
 
   dimension: english_month_name {
+    label: "Month Name"
     type: string
     sql: ${TABLE}.EnglishMonthName ;;
   }
@@ -50,29 +53,35 @@ view: dim_date {
   dimension: fiscal_quarter {
     type: number
     sql: ${TABLE}.FiscalQuarter ;;
+    hidden: yes
   }
 
   dimension: fiscal_semester {
     type: number
     sql: ${TABLE}.FiscalSemester ;;
+    hidden: yes
   }
 
   dimension: fiscal_year {
     type: number
     sql: ${TABLE}.FiscalYear ;;
+    hidden: yes
   }
 
   dimension: french_day_name_of_week {
     type: string
     sql: ${TABLE}.FrenchDayNameOfWeek ;;
+    hidden: yes
   }
 
   dimension: french_month_name {
     type: string
     sql: ${TABLE}.FrenchMonthName ;;
+    hidden: yes
   }
 
   dimension_group: full_date_alternate_key {
+    label: "Date"
     type: time
     timeframes: [
       raw,
@@ -95,11 +104,13 @@ view: dim_date {
   dimension: spanish_day_name_of_week {
     type: string
     sql: ${TABLE}.SpanishDayNameOfWeek ;;
+    hidden: yes
   }
 
   dimension: spanish_month_name {
     type: string
     sql: ${TABLE}.SpanishMonthName ;;
+    hidden: yes
   }
 
   dimension: week_number_of_year {
