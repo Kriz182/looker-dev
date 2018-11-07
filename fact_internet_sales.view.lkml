@@ -123,7 +123,7 @@ view: fact_internet_sales {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [order_details*]
   }
 
   measure: total_sales {
@@ -153,5 +153,9 @@ view: fact_internet_sales {
   measure: total_quantity {
     type: sum
     sql: ${order_quantity} ;;
+  }
+
+  set: order_details  {
+    fields: [total_sales, average_sales, total_gross_margin, total_quantity, count]
   }
 }
