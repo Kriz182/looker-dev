@@ -17,6 +17,7 @@ view: dim_date {
   }
 
   dimension: date_key {
+    primary_key: yes
     type: number
     sql: ${TABLE}.DateKey ;;
   }

@@ -9,6 +9,7 @@ view: dim_sales_territory {
   dimension: sales_territory_country {
     type: string
     sql: ${TABLE}.SalesTerritoryCountry ;;
+    map_layer_name: countries
   }
 
   dimension: sales_territory_group {
@@ -17,6 +18,7 @@ view: dim_sales_territory {
   }
 
   dimension: sales_territory_key {
+    primary_key: yes
     type: number
     sql: ${TABLE}.SalesTerritoryKey ;;
   }

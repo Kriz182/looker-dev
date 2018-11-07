@@ -17,6 +17,7 @@ view: dim_product_category {
   }
 
   dimension: product_category_key {
+    primary_key: yes
     type: number
     sql: ${TABLE}.ProductCategoryKey ;;
   }

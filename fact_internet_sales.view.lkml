@@ -59,6 +59,7 @@ view: fact_internet_sales {
   dimension: product_standard_cost {
     type: string
     sql: ${TABLE}.ProductStandardCost ;;
+    value_format_name: usd
   }
 
   dimension: promotion_key {
@@ -74,6 +75,7 @@ view: fact_internet_sales {
   dimension: sales_amount {
     type: string
     sql: ${TABLE}.SalesAmount ;;
+    value_format_name: usd
   }
 
   dimension: sales_order_line_number {
@@ -99,16 +101,19 @@ view: fact_internet_sales {
   dimension: tax_amt {
     type: string
     sql: ${TABLE}.TaxAmt ;;
+    value_format_name: usd
   }
 
   dimension: total_product_cost {
     type: string
     sql: ${TABLE}.TotalProductCost ;;
+    value_format_name: usd
   }
 
   dimension: unit_price {
     type: string
     sql: ${TABLE}.UnitPrice ;;
+    value_format_name: usd
   }
 
   dimension: unit_price_discount_pct {
@@ -124,20 +129,29 @@ view: fact_internet_sales {
   measure: total_sales {
     type:  sum
     sql: ${sales_amount} ;;
+    value_format_name: usd
   }
 
   measure: average_sales  {
     type: average
     sql: ${sales_amount} ;;
+    value_format_name: usd
   }
 
   measure: gross_margin {
     type: number
     sql: ${sales_amount}-${total_product_cost} ;;
+    value_format_name: usd
   }
 
   measure: total_gross_margin {
     type: number
     sql: SUM(${gross_margin}) ;;
+    value_format_name: usd
+  }
+
+  measure: total_quantity {
+    type: sum
+    sql: ${order_quantity} ;;
   }
 }
