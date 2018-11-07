@@ -11,6 +11,7 @@ datagroup: adventureworks_default_datagroup {
 persist_with: adventureworks_default_datagroup
 
 explore: fact_internet_sales {
+  view_label: "Internet Sales"
   join: dim_product {
     type: left_outer
     sql_on: ${dim_product.product_key} = ${fact_internet_sales.product_key} ;;
