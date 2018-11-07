@@ -12,7 +12,6 @@ view: dim_product_subcategory {
   }
 
   dimension: product_category_key {
-    primary_key: yes
     type: number
     sql: ${TABLE}.ProductCategoryKey ;;
   }
@@ -23,6 +22,7 @@ view: dim_product_subcategory {
   }
 
   dimension: product_subcategory_key {
+    primary_key: yes
     type: number
     sql: ${TABLE}.ProductSubcategoryKey ;;
   }

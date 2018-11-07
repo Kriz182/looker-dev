@@ -22,17 +22,17 @@ explore: fact_internet_sales {
   }
 
   join: dim_product_subcategory {
-    view_label: "SubCategory"
+    view_label: "Sub Category"
     type: left_outer
-    sql_on: ${dim_product.product_subcategory_key} = ${dim_product.product_key} ;;
+    sql_on: ${dim_product_subcategory.product_subcategory_key} = ${dim_product.product_subcategory_key} ;;
     relationship: many_to_one
   }
 
   join: dim_product_category {
     view_label: "Category"
     type: left_outer
-    sql_on: ${dim_product_subcategory.product_subcategory_alternate_key} = ${dim_product_category.product_category_key} ;;
-    relationship: many_to_many
+    sql_on: ${dim_product_subcategory.product_category_key} = ${dim_product_category.product_category_key} ;;
+    relationship: many_to_one
   }
 
   join: dim_date {

@@ -138,15 +138,15 @@ view: fact_internet_sales {
     value_format_name: usd
   }
 
-  measure: gross_margin {
+  dimension: gross_margin {
     type: number
     sql: ${sales_amount}-${total_product_cost} ;;
     value_format_name: usd
   }
 
   measure: total_gross_margin {
-    type: number
-    sql: SUM(${gross_margin}) ;;
+    type: sum
+    sql: ${gross_margin} ;;
     value_format_name: usd
   }
 
