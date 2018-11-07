@@ -11,40 +11,55 @@ datagroup: adventureworks_default_datagroup {
 persist_with: adventureworks_default_datagroup
 
 explore: fact_internet_sales {
-  view_label: "Internet Sales"
+  label: "(1) Internet Sales"
+  view_name: fact_internet_sales
+
   join: dim_product {
+    view_label: "Product"
     type: left_outer
     sql_on: ${dim_product.product_key} = ${fact_internet_sales.product_key} ;;
     relationship: many_to_one
   }
 
   join: dim_product_subcategory {
+    view_label: "SubCategory"
     type: left_outer
     sql_on: ${dim_product.product_subcategory_key} = ${dim_product.product_key} ;;
     relationship: many_to_one
   }
 
   join: dim_product_category {
+    view_label: "Category"
     type: left_outer
     sql_on: ${dim_product_subcategory.product_subcategory_alternate_key} = ${dim_product_category.product_category_key} ;;
     relationship: many_to_many
   }
 
   join: dim_date {
+    view_label: "Date"
     type: left_outer
     sql_on: ${dim_date.date_key} = ${fact_internet_sales.order_date_key} ;;
     relationship: many_to_one
   }
 
   join: dim_customer {
+    view_label: "Customer"
     type: left_outer
     sql_on: ${dim_customer.customer_key} = ${fact_internet_sales.customer_key} ;;
     relationship: many_to_one
   }
 
   join: dim_sales_territory {
+    view_label: "Sales Territory"
     type:  left_outer
     sql_on: ${dim_sales_territory.sales_territory_key} = ${fact_internet_sales.sales_territory_key};;
+    relationship: many_to_one
+  }
+
+  join: dim_geography {
+    view_label: "Geography"
+    type: left_outer
+    sql_on: ${dim_sales_territory.sales_territory_key} = ${dim_geography.geography_key};;
     relationship: many_to_one
   }
 }
