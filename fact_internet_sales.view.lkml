@@ -1,5 +1,6 @@
 view: fact_internet_sales {
   sql_table_name: dbo.FactInternetSales ;;
+  view_label: "Internet Sales"
 
   dimension: carrier_tracking_number {
     type: string
@@ -9,11 +10,13 @@ view: fact_internet_sales {
   dimension: currency_key {
     type: number
     sql: ${TABLE}.CurrencyKey ;;
+    hidden: yes
   }
 
   dimension: customer_key {
     type: number
     sql: ${TABLE}.CustomerKey ;;
+    hidden: yes
   }
 
   dimension: customer_ponumber {
@@ -29,6 +32,7 @@ view: fact_internet_sales {
   dimension: due_date_key {
     type: number
     sql: ${TABLE}.DueDateKey ;;
+    hidden: yes
   }
 
   dimension: extended_amount {
@@ -44,6 +48,7 @@ view: fact_internet_sales {
   dimension: order_date_key {
     type: number
     sql: ${TABLE}.OrderDateKey ;;
+    hidden: yes
   }
 
   dimension: order_quantity {
@@ -54,6 +59,7 @@ view: fact_internet_sales {
   dimension: product_key {
     type: number
     sql: ${TABLE}.ProductKey ;;
+    hidden: yes
   }
 
   dimension: product_standard_cost {
@@ -65,11 +71,13 @@ view: fact_internet_sales {
   dimension: promotion_key {
     type: number
     sql: ${TABLE}.PromotionKey ;;
+    hidden: yes
   }
 
   dimension: revision_number {
     type: number
     sql: ${TABLE}.RevisionNumber ;;
+    hidden: yes
   }
 
   dimension: sales_amount {
@@ -81,6 +89,7 @@ view: fact_internet_sales {
   dimension: sales_order_line_number {
     type: number
     sql: ${TABLE}.SalesOrderLineNumber ;;
+    hidden: yes
   }
 
   dimension: sales_order_number {
@@ -91,11 +100,13 @@ view: fact_internet_sales {
   dimension: sales_territory_key {
     type: number
     sql: ${TABLE}.SalesTerritoryKey ;;
+    hidden: yes
   }
 
   dimension: ship_date_key {
     type: number
     sql: ${TABLE}.ShipDateKey ;;
+    hidden: yes
   }
 
   dimension: tax_amt {
