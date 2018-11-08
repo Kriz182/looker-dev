@@ -1,5 +1,6 @@
 view: fact_internet_sales {
   sql_table_name: dbo.FactInternetSales ;;
+  view_label: "Internet Sales"
 
   dimension: carrier_tracking_number {
     type: string
